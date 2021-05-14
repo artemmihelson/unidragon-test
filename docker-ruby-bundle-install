@@ -1,0 +1,1 @@
+docker-compose run --rm --service-ports --workdir="/unidragon-service" unidragon-service-ruby bundle install

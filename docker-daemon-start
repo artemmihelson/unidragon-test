@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mypidfile=src/tmp/pids/server.pid
+# Ensure PID file is removed on program exit.
+trap "rm -f -- '$mypidfile'" EXIT
+
+docker-compose up -d
