@@ -89,7 +89,7 @@ class UsersController < ApplicationController
   end
 
   def get_users_for_date
-    date = Time.now.strftime('%d-%m-%Y')
+    date = 25.days.ago.strftime('%d-%m-%Y')
     response = FIREBASE.get('users', { orderBy: '"created"', startAt: "\"#{date}\"", endAt: "\"#{date}\"" })
     response.body
   end
